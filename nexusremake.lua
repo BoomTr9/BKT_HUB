@@ -226,7 +226,7 @@ do -- Nexus
             if self.Terminated then break end
 
             if not Host then
-                Host = 'login-chat.gl.at.ply.gg:31486'
+                Host = 'posted-rx.gl.at.ply.gg:6899'
             end
 
             local Success, Socket = pcall(WSConnect, ('ws://%s/Nexus?name=%s&id=%s&jobId=%s'):format(Host, LocalPlayer.Name, LocalPlayer.UserId, game.JobId))
@@ -278,7 +278,7 @@ do -- Nexus
     end
 
     function Nexus:OnButtonClick(Name, Function)
-        self:AddCommand('ButtonClicked:' .. Name, Function)
+        self:AddCommand('ButtonClicked' .. Name, Function)
     end
 
     Nexus.MessageReceived:Connect(function(Message)
