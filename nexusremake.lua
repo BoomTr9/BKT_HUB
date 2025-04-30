@@ -278,7 +278,7 @@ do -- Nexus
     end
 
     function Nexus:OnButtonClick(Name, Function)
-        self:AddCommand('ButtonClicked' .. Name, Function)
+        self:AddCommand('ButtonClicked:' .. Name, Function)
     end
 
     Nexus.MessageReceived:Connect(function(Message)
